@@ -1,4 +1,4 @@
-<?php namespace Addon\FieldType\Textarea;
+<?php namespace Streams\Addon\FieldType\Textarea;
 
 use Streams\Core\Addon\FieldTypeAbstract;
 
