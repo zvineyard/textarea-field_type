@@ -9,32 +9,15 @@ class TextareaFieldType extends FieldTypeAbstract
      *
      * @var string
      */
-    public $columnType = 'string';
-
-    /**
-     * Field type version
-     *
-     * @var string
-     */
-    public $version = '1.1.0';
-
-    /**
-     * Field type author information.
-     *
-     * @var array
-     */
-    public $author = array(
-        'name' => 'AI Web Systems, Inc.',
-        'url'  => 'http://aiwebsystems.com/',
-    );
+    public $columnType = 'text';
 
     /**
      * Return the input used for forms.
      *
      * @return mixed
      */
-    public function formInput()
+    public function input()
     {
-        return \Form::textarea($this->formSlug, $this->value);
+        return \Form::textarea($this->formSlug(), $this->value);
     }
 }
