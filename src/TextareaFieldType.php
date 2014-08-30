@@ -18,6 +18,6 @@ class TextareaFieldType extends FieldTypeAbstract
      */
     public function input()
     {
-        return \Form::textarea($this->formSlug(), $this->value);
+        return \Form::textarea($this->inputName(), $this->value());
     }
 }
