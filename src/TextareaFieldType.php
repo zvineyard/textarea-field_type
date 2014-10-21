@@ -1,8 +1,8 @@
-<?php namespace Anomaly\Streams\FieldType\Textarea;
+<?php namespace Anomaly\Streams\Addon\FieldType\Textarea;
 
-use Streams\Core\Addon\FieldTypeAbstract;
+use Anomaly\Streams\Platform\Addon\FieldType\FieldTypeAddon;
 
-class TextareaFieldType extends FieldTypeAbstract
+class TextareaFieldType extends FieldTypeAddon
 {
     /**
      * The database column type this field type uses.
