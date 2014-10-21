@@ -4,6 +4,8 @@ use Anomaly\Streams\Platform\Addon\FieldType\FieldTypeAddon;
 
 class TextareaFieldType extends FieldTypeAddon
 {
+    protected $slug = 'textarea';
+
     /**
      * The database column type this field type uses.
      *
@@ -18,6 +20,6 @@ class TextareaFieldType extends FieldTypeAddon
      */
     public function input()
     {
-        return \Form::textarea($this->inputName(), $this->value());
+        return \Form::textarea($this->inputName(), $this->value);
     }
 }
