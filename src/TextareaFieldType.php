@@ -2,12 +2,31 @@
 
 use Anomaly\Streams\Platform\Addon\FieldType\FieldTypeAddon;
 
+/**
+ * Class TextareaFieldType
+ *
+ * @link          http://anomaly.is/streams-platform
+ * @author        AnomalyLabs, Inc. <hello@anomaly.is>
+ * @author        Ryan Thompson <ryan@anomaly.is>
+ * @package       Anomaly\Streams\Addon\FieldType\Textarea
+ */
 class TextareaFieldType extends FieldTypeAddon
 {
-    public $columnType = 'text';
 
+    /**
+     * The database column type.
+     *
+     * @var string
+     */
+    protected $columnType = 'text';
+
+    /**
+     * Return the input HTML.
+     *
+     * @return mixed
+     */
     public function input()
     {
-        return \Form::textarea($this->inputName(), $this->value);
+        return app('form')->textarea($this->getFieldName(), $this->getValue());
     }
 }
