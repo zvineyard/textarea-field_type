@@ -21,12 +21,9 @@ class TextareaFieldType extends FieldType
     protected $columnType = 'text';
 
     /**
-     * Return the input HTML.
+     * The input view.
      *
-     * @return mixed
+     * @var string
      */
-    public function input()
-    {
-        return app('form')->textarea($this->getFieldName(), $this->getValue());
-    }
+    protected $inputView = 'field_type.textarea::input';
 }
