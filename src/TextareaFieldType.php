@@ -1,4 +1,4 @@
-<?php namespace Anomaly\Streams\Addon\FieldType\Textarea;
+<?php namespace Anomaly\TextareaFieldType;
 
 use Anomaly\Streams\Platform\Addon\FieldType\FieldType;
 
