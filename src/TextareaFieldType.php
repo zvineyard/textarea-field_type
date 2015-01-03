@@ -25,5 +25,5 @@ class TextareaFieldType extends FieldType
      *
      * @var string
      */
-    protected $inputView = 'field_type.textarea::input';
+    protected $inputView = 'anomaly.field_type.textarea::input';
 }
