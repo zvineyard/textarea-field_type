@@ -1,5 +1,5 @@
 {
-    "name": "anomaly/textarea-field-type",
+    "name": "anomaly/textarea-field_type",
     "type": "streams-addon",
     "description": "Textarea field type.",
     "authors": [
