@@ -2,7 +2,12 @@
     "name": "anomaly/textarea-field_type",
     "type": "streams-addon",
     "description": "A textarea field type.",
-    "keywords": ["streams-addon", "textarea", "pyrocms", "laravel"],
+    "keywords": [
+        "streams-addon",
+        "textarea",
+        "pyrocms",
+        "laravel"
+    ],
     "homepage": "http://anomaly.is/",
     "version": "1.0.0-alpha",
     "license": "MIT",
