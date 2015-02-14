@@ -2,5 +2,5 @@
 
 return [
     'name'        => 'Textarea',
-    'description' => 'A textarea field type.',
+    'description' => 'A simple textarea field type.'
 ];
