@@ -2,6 +2,9 @@
 
 return [
     'rows' => [
-        'type' => 'anomaly.field_type.integer'
+        'type'   => 'anomaly.field_type.integer',
+        'config' => [
+            'min' => 3
+        ]
     ]
 ];
