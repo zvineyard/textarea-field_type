@@ -2,7 +2,7 @@
 
 return [
     'rows' => [
-        'label'        => 'Rows',
-        'instructions' => 'The number of rows affects the textarea\'s height.'
+        'label'        => 'Input Rows',
+        'instructions' => 'Specify the visible number of lines in a text area before scrolling.'
     ]
 ];
