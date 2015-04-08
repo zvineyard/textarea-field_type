@@ -2,5 +2,5 @@
         class="form-control"
         name="{{ field_type.getInputName() }}"
         rows="{{ field_type.config.rows ?: 6 }}"
-        placeholder="{{ trans(field_type.config.placeholder) }}"
-        >{{ field_type.value }}</textarea>
+        placeholder="{{ trans(field_type.placeholder) }}"
+        {{ field_type.disabled ? 'disabled' }}>{{ field_type.value }}</textarea>
