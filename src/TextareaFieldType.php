@@ -27,4 +27,32 @@ class TextareaFieldType extends FieldType
      */
     protected $inputView = 'anomaly.field_type.textarea::input';
 
+    /**
+     * The field config.
+     *
+     * @var array
+     */
+    protected $config = [
+        'rows' => 6
+    ];
+
+    /**
+     * Get the rules.
+     *
+     * @return array
+     */
+    public function getRules()
+    {
+        $rules = parent::getRules();
+
+        if ($min = array_get($this->getConfig(), 'min')) {
+            $rules[] = 'min:' . $min;
+        }
+
+        if ($max = array_get($this->getConfig(), 'max')) {
+            $rules[] = 'max:' . $max;
+        }
+
+        return $rules;
+    }
 }
