@@ -5,8 +5,7 @@ return [
         'title'    => 'General',
         'sections' => [
             'introduction'  => 'Introduction',
-            'configuration' => 'Configuration',
-            'output'        => 'Output'
+            'configuration' => 'Configuration'
         ]
     ]
 ];
