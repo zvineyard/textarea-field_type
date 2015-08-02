@@ -51,3 +51,13 @@ The default input value. The default value is `null`.
 ## Output
 
 This field type returns the value from the database by default.
+
+### `yaml()`
+
+Returns the value parsed as YAML.
+
+    // Twig usage
+    {{ entry.example.yaml }}
+    
+    // API usage
+    $entry->example->yaml;
