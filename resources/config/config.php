@@ -2,8 +2,9 @@
 
 return [
     'rows'          => [
-        'type'   => 'anomaly.field_type.integer',
-        'config' => [
+        'type'     => 'anomaly.field_type.integer',
+        'required' => true,
+        'config'   => [
             'default_value' => 6,
             'min'           => 3
         ]
