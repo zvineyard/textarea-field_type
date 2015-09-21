@@ -15,6 +15,13 @@ class TextareaFieldTypePresenter extends FieldTypePresenter
 {
 
     /**
+     * The YAML parser.
+     *
+     * @var Yaml
+     */
+    protected $yaml;
+
+    /**
      * The decorated object.
      * This is for IDE hinting.
      *
@@ -23,12 +30,35 @@ class TextareaFieldTypePresenter extends FieldTypePresenter
     protected $object;
 
     /**
+     * Create a new TextareaFieldTypePresenter instance.
+     *
+     * @param mixed $object
+     */
+    public function __construct(Yaml $yaml, $object)
+    {
+        $this->yaml = $yaml;
+
+        parent::__construct($object);
+    }
+
+    /**
      * Return the parsed as YAML.
      *
      * @return array
      */
     public function yaml()
     {
-        return (new Yaml())->parse($this->object->getValue());
+        return $this->yaml->parse($this->object->getValue());
+    }
+
+    /**
+     * Return a specific line.
+     *
+     * @param int $number
+     * @return string
+     */
+    public function line($number = 1)
+    {
+        return array_get(explode("\n", $this->object->getValue()), $number - 1);
     }
 }
