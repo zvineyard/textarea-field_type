@@ -20,7 +20,7 @@ The textarea field type provides a basic HTML textarea with configurable height.
 
     protected $fields = [
         'example' => [
-            'type'   => 'anomaly.field_type.text',
+            'type'   => 'anomaly.field_type.textarea',
             'config' => [
                 'rows'          => 5,
                 'min'           => 10,
