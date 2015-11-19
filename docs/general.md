@@ -61,3 +61,33 @@ Returns the value parsed as YAML.
     
     // API usage
     $entry->example->yaml;
+
+### `lines()`
+
+Returns an array of lines of text from the value.
+
+    // Twig usage
+    {{ entry.example.lines|join(' - ') }}
+
+    // API usage
+    $entry->example->lines;
+
+### `line($number = 1)`
+
+Returns a line of text from the value.
+
+    // Twig usage
+    {{ entry.example.line(5) }}
+
+    // API usage
+    $entry->example->line(5);
+
+### `limit($limit = 100, $end = '...')`
+
+Returns a limited text snippet from the value.
+
+    // Twig usage
+    {{ entry.example.limit(50, '... Read More') }}
+
+    // API usage
+    $entry->example->limit(50, '... Read More');

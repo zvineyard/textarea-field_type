@@ -72,4 +72,16 @@ class TextareaFieldTypePresenter extends FieldTypePresenter
     {
         return array_get(explode("\n", $this->lines()), $number - 1);
     }
+
+    /**
+     * Return a limited string.
+     *
+     * @param int    $limit
+     * @param string $end
+     * @return string
+     */
+    public function limit($limit = 100, $end = '...')
+    {
+        return str_limit($this->object->getValue(), $limit, $end);
+    }
 }
