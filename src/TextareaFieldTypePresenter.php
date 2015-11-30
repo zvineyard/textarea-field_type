@@ -70,7 +70,7 @@ class TextareaFieldTypePresenter extends FieldTypePresenter
      */
     public function line($number = 1)
     {
-        return array_get(explode("\n", $this->lines()), $number - 1);
+        return array_get($this->lines(), $number - 1);
     }
 
     /**
