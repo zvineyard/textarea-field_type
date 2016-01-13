@@ -1,9 +1,20 @@
+{{ asset_add("scripts.js", "anomaly.field_type.textarea::js/jquery.charactercounter.js", ["min"]) }}
+{{ asset_add("scripts.js", "anomaly.field_type.textarea::js/input.js", ["min"]) }}
+
 <textarea
         class="form-control"
+        data-provides="textarea"
         name="{{ field_type.input_name }}"
+        data-max="{{ field_type.config.max }}"
         rows="{{ field_type.config.rows ?: 6 }}"
         placeholder="{{ trans(field_type.placeholder) }}"
         {{ field_type.disabled ? 'disabled' }}
         {{ field_type.readonly ? 'readonly' }}
         {{ field_type.required ? 'required' }}
-        >{{ field_type.value }}</textarea>
+>{{ field_type.value }}</textarea>
+
+{% if field_type.config.max %}
+    <small class="counter text-muted">
+        <span class="count"></span> {{ trans('anomaly.field_type.textarea::input.characters_remaining') }}
+    </small>
+{% endif %}
