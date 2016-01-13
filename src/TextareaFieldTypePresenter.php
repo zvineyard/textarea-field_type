@@ -59,7 +59,12 @@ class TextareaFieldTypePresenter extends FieldTypePresenter
      */
     public function lines($limit = 9999)
     {
-        return explode("\n", $this->object->getValue(), $limit);
+        return array_map(
+            function ($line) {
+                return trim($line);
+            },
+            explode("\n", $this->object->getValue(), $limit)
+        );
     }
 
     /**
