@@ -6,7 +6,7 @@ return [
         'required' => true,
         'config'   => [
             'default_value' => 6,
-            'min'           => 3
+            'min'           => 2
         ]
     ],
     'min'           => [
