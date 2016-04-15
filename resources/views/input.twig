@@ -7,6 +7,9 @@
         data-max="{{ field_type.config.max }}"
         rows="{{ field_type.config.rows ?: 6 }}"
         placeholder="{{ trans(field_type.placeholder) }}"
+        {% if field_type.config.max %}
+        maxlength="{{ field_type.config.max }}"
+        {% endif %}
         {{ html_attributes(field_type.attributes) }}
         {{ field_type.disabled ? 'disabled' }}
         {{ field_type.readonly ? 'readonly' }}>{{ field_type.value }}</textarea>
