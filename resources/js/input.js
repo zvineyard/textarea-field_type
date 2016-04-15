@@ -1,7 +1,7 @@
 $(function () {
 
     // Initialize text suggestions
-    $('input[data-provides="anomaly.field_type.textarea"]').each(function () {
+    $('textarea[data-provides="anomaly.field_type.textarea"]').each(function () {
 
         var wrapper = $(this).closest('div');
         var counter = wrapper.find('.counter');
