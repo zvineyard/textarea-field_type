@@ -9,7 +9,6 @@ use Symfony\Component\Yaml\Yaml;
  * @link          http://pyrocms.com/
  * @author        PyroCMS, Inc. <support@pyrocms.com>
  * @author        Ryan Thompson <ryan@pyrocms.com>
- * @package       Anomaly\TextareaFieldType
  */
 class TextareaFieldTypePresenter extends FieldTypePresenter
 {
@@ -54,7 +53,7 @@ class TextareaFieldTypePresenter extends FieldTypePresenter
     /**
      * Return the lines.
      *
-     * @param int $limit
+     * @param  int   $limit
      * @return array
      */
     public function lines($limit = 9999)
@@ -70,7 +69,7 @@ class TextareaFieldTypePresenter extends FieldTypePresenter
     /**
      * Return a specific line.
      *
-     * @param int $number
+     * @param  int    $number
      * @return string
      */
     public function line($number = 1)
@@ -81,8 +80,8 @@ class TextareaFieldTypePresenter extends FieldTypePresenter
     /**
      * Return a limited string.
      *
-     * @param int    $limit
-     * @param string $end
+     * @param  int    $limit
+     * @param  string $end
      * @return string
      */
     public function limit($limit = 100, $end = '...')

@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'characters_remaining' => 'characters remaining.'
+    'characters_remaining' => 'characters remaining.',
 ];

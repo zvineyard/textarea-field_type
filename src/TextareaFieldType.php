@@ -8,7 +8,6 @@ use Anomaly\Streams\Platform\Addon\FieldType\FieldType;
  * @link          http://pyrocms.com/
  * @author        PyroCMS, Inc. <support@pyrocms.com>
  * @author        Ryan Thompson <ryan@pyrocms.com>
- * @package       Anomaly\Streams\Addon\FieldType\Textarea
  */
 class TextareaFieldType extends FieldType
 {
@@ -33,7 +32,7 @@ class TextareaFieldType extends FieldType
      * @var array
      */
     protected $config = [
-        'rows' => 6
+        'rows' => 6,
     ];
 
     /**
