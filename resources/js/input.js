@@ -1,4 +1,4 @@
-$(function () {
+$(document).on('ajaxComplete ready', function () {
 
     // Initialize text suggestions
     $('textarea[data-provides="anomaly.field_type.textarea"]:not([data-initialized])').each(function () {
