@@ -33,7 +33,7 @@ class TextareaFieldTypeAccessor extends FieldTypeAccessor
         $value = parent::get();
 
         if ($this->fieldType->config('storage') == 'json') {
-            $value = json_decode($value);
+            $value = json_decode($value, true);
         }
 
         if ($this->fieldType->config('storage') == 'serialize') {
