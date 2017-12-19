@@ -13,6 +13,10 @@ return [
         'label'        => 'Maximum Length',
         'instructions' => 'Specify the maximum input length allowed.',
     ],
+    'show_counter'  => [
+        'label'        => 'Show Counter',
+        'instructions' => 'Display the remaining characters while typing?',
+    ],
     'default_value' => [
         'label'        => 'Default Value',
         'instructions' => 'Specify the default value.',

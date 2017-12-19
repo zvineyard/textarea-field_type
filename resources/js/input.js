@@ -1,22 +1,44 @@
-$(document).on('ajaxComplete ready', function () {
+(function (window, document) {
 
-    // Initialize text suggestions
-    $('textarea[data-provides="anomaly.field_type.textarea"]:not([data-initialized])').each(function () {
+    let fields = Array.from(
+        document.querySelectorAll('textarea[data-provides="anomaly.field_type.textarea"]')
+    );
 
-        $(this).attr('data-initialized', '');
+    fields.forEach(function (field) {
 
-        var wrapper = $(this).closest('div');
-        var counter = wrapper.find('.counter');
+        let wrapper = field.closest('div');
+        let counter = wrapper.querySelector('.counter');
+        let count = counter.querySelector('.count');
 
-        $(this).characterCounter({
-            limit: $(this).data('max'),
-            counterSelector: $(this).closest('div').find('.count'),
-            onExceed: function () {
-                counter.addClass('text-danger');
-            },
-            onDeceed: function () {
-                counter.removeClass('text-danger');
+        let max = field.dataset.max;
+
+        /**
+         * Listen for keyup and update
+         * the counter and contexts.
+         */
+        field.addEventListener('keyup', function () {
+
+            if (max) {
+                count.innerText = max - field.value.length;
+            } else {
+                count.innerText = field.value.length;
+            }
+
+            if (max && field.value.length > max) {
+                counter.classList.add('text-danger');
+            } else {
+                counter.classList.remove('text-danger');
             }
         });
+
+        /**
+         * Fire the count event initially
+         * to cause an initial count.
+         */
+        let event = document.createEvent('HTMLEvents');
+
+        event.initEvent('keyup', false, true);
+
+        field.dispatchEvent(event);
     });
-});
+})(window, document);

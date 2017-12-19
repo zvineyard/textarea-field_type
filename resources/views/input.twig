@@ -15,8 +15,12 @@
         {{ field_type.disabled ? 'disabled' }}
         {{ field_type.readonly ? 'readonly' }}>{{ field_type.value }}</textarea>
 
-{% if field_type.config.max %}
+{% if field_type.config.show_counter %}
     <small class="counter text-muted">
-        <span class="count"></span> {{ trans('anomaly.field_type.textarea::input.characters_remaining') }}
+        {% if field_type.config.max %}
+            <span class="count"></span> {{ trans('anomaly.field_type.textarea::input.characters_remaining') }}
+        {% else %}
+            {{ trans('anomaly.field_type.textarea::input.character_length') }}: <span class="count"></span>
+        {% endif %}
     </small>
 {% endif %}
