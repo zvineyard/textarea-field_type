@@ -9,9 +9,7 @@
 
         fields.forEach(function (field) {
 
-            const wrapper = field.closest('div');
-            const counter = wrapper.querySelector('.counter');
-            const count = counter.querySelector('.count');
+            const wrapper = field.parentElement;
             const max = field.dataset.max;
 
             /**
@@ -19,17 +17,23 @@
              * the counter and contexts.
              */
             field.addEventListener('keyup', function () {
+                const counter = wrapper.querySelector('.counter');
+                const count = wrapper.querySelector('.count');
 
-                if (max) {
-                    count.innerText = max - field.value.length;
-                } else {
-                    count.innerText = field.value.length;
+                if (count) {
+                  if (max) {
+                      count.innerText = max - field.value.length;
+                  } else {
+                      count.innerText = field.value.length;
+                  }
                 }
 
-                if (max && field.value.length > max) {
-                    counter.classList.add('text-danger');
-                } else {
-                    counter.classList.remove('text-danger');
+                if (counter) {
+                  if (max && field.value.length > max) {
+                      counter.classList.add('text-danger');
+                  } else {
+                      counter.classList.remove('text-danger');
+                  }
                 }
             });
 
@@ -44,6 +48,5 @@
         });
     };
 
-    
     document.addEventListener('DOMContentLoaded', init);
 })(window, document);
