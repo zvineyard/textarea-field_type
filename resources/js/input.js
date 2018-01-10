@@ -19,11 +19,9 @@
             const count = wrapper.querySelector('.count');
 
             if (count) {
-                if (max) {
-                    count.innerText = max - field.value.length;
-                } else {
-                    count.innerText = field.value.length;
-                }
+                count.innerText = max
+                    ? max - field.value.length;
+                    : field.value.length;
             }
 
             if (counter) {
@@ -39,11 +37,7 @@
          * Fire the count event initially
          * to cause an initial count.
          */
-        const event = document.createEvent('HTMLEvents');
-
-        event.initEvent('keyup', false, true);
-
-        field.dispatchEvent(event);
+        field.dispatchEvent(new Event('keyup'));
     });
     
 })(window, document);
