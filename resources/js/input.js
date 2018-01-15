@@ -20,7 +20,7 @@
 
             if (count) {
                 count.innerText = max
-                    ? max - field.value.length;
+                    ? max - field.value.length
                     : field.value.length;
             }
 
