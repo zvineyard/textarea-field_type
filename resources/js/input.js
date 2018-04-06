@@ -1,6 +1,6 @@
 (function (window, document) {
 
-    const fields = Array.from(
+    const fields = Array.prototype.slice.call(
         document.querySelectorAll('textarea[data-provides="anomaly.field_type.textarea"]')
     );
 
