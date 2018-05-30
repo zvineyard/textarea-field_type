@@ -13,6 +13,11 @@ return [
         'label'        => 'Maximum Length',
         'instructions' => 'Specify the maximum input length allowed.',
     ],
+    'autogrow'      => [
+        'label'        => 'Autogrow',
+        'instructions' => 'Automatically adjust input height while typing?',
+        'warning'      => 'Height will not shrink past the <strong>Input Rows</strong> specified above.',
+    ],
     'show_counter'  => [
         'label'        => 'Show Counter',
         'instructions' => 'Display the remaining characters while typing?',

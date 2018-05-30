@@ -6,8 +6,15 @@
 
     fields.forEach(function (field) {
 
-        const wrapper = field.parentElement;
-        const max = field.dataset.max;
+        let wrapper = field.parentElement;
+        let max = field.getAttribute('data-max');
+
+        /**
+         * Automatically grow the textarea.
+         */
+        if (field.getAttribute('data-autogrow') == true) {
+            autosize(field);
+        }
 
         /**
          * Listen for keyup and update
@@ -15,8 +22,8 @@
          */
         field.addEventListener('keyup', function () {
 
-            const counter = wrapper.querySelector('.counter');
-            const count = wrapper.querySelector('.count');
+            let counter = wrapper.querySelector('.counter');
+            let count = wrapper.querySelector('.count');
 
             if (count) {
                 count.innerText = max

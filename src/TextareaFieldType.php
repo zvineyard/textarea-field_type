@@ -32,8 +32,9 @@ class TextareaFieldType extends FieldType
      * @var array
      */
     protected $config = [
-        'rows'    => 6,
-        'storage' => null,
+        'rows'     => 6,
+        'storage'  => null,
+        'autogrow' => true,
     ];
 
     /**
